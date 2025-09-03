@@ -31,5 +31,21 @@ public class assertions {
 	}
 	
 	
+	@Test
+	void testTittlecond1() {
+		
+		String exp_title="Opencart";
+		String act_title="Opencart";
+		if (exp_title==act_title) {
+			Assert.assertTrue(true);
+		}else {
+			Assert.assertTrue(false);
+		}
+		
+		
+		
+	}
+	
+	
 	
 }
