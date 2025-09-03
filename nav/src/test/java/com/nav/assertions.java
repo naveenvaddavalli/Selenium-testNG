@@ -19,7 +19,7 @@ public class assertions {
 	void testTittlecond() {
 		
 		String exp_title="Opencart";
-		String act_title="Openncart";
+		String act_title="Opencart";
 		if (exp_title==act_title) {
 			Assert.assertTrue(true);
 		}else {
