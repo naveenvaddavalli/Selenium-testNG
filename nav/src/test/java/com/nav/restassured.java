@@ -38,20 +38,7 @@ public class restassured {
 		   //given().when().get("https://demo.guru99.com/V4/sinkministatement.php").then().assertThat().statusCode(200);
 		}
 	
-	@Test
-	public static void gettotalamount() {
-		ArrayList<String> amounts = when().get(url).then().extract().path("result.statements.AMOUNT");
-		
-		int sumall = 0;
-		
-		for(String a:amounts) {
-			sumall += Integer.valueOf(a);
-			
-			
-		}
-		
-		System.out.println(sumall);
-	}
+	
 	
 	
 
