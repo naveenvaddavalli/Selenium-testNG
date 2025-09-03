@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="FullSuite" verbose="1">
+ <listeners>
+    <listener class-name="com.resources.mylisteners"/>
+    <listener class-name="com.resources.extentTestListener"/>
+    <listener class-name="com.resources.pdfListeners"/>
+    
+  </listeners>
+
+  <test name="AllTests">
+    <packages>
+      <package name="com.nav"/>
+    </packages>
+  </test>
+</suite>
