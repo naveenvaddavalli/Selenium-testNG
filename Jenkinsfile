@@ -6,7 +6,7 @@ pipeline {
         jdk 'Java'        // name of JDK configured in Jenkins
     }
     triggers {
-        pollSCM('H/5 * * * * *') // Polls the SCM every 5 minutes for changes
+        pollSCM('H/5 * * * *') // Polls the SCM every 5 minutes for changes
     }
     
     stages {
