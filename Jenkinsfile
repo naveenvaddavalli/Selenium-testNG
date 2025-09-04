@@ -6,26 +6,27 @@ pipeline {
         jdk 'Java'        // name of JDK configured in Jenkins
     }
     triggers {
-          githubPush() // Trigger build on GitHub push events
+          githubPush() // Trigger build on GitHub push events only.
     }
     
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'push',
-                    url: 'https://github.com/naveenvaddavalli/cypress_vscode.git'
+                  git branch: 'newbranchintelli',  // branch
+                                    credentialsId: 'ff951900-7a73-4001-905d-cd0cf7b007f9',
+                                    url: 'https://github.com/naveenvaddavalli/Selenium-testNG.git'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
 
@@ -41,7 +42,7 @@ pipeline {
             echo 'This will always run after the stages are finished.'
         }
         success {
-            echo 'This will run only if the pipeline succeeds.'
+            echo 'This will run only if the pipeline succeeds with no failure.'
         }
         failure {
             echo 'This will run only if the pipeline fails.'
