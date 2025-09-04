@@ -41,7 +41,7 @@ pipeline {
             echo 'This will always run after the stages are finished.'
         }
         success {
-            echo 'This will run only if the pipeline succeeds.'
+            echo 'This will run only if the pipeline succeeds with no failure.'
         }
         failure {
             echo 'This will run only if the pipeline fails.'
