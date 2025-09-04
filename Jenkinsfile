@@ -3,10 +3,10 @@ pipeline {
 
     tools {
         maven 'Maven -3.9.11'    // name of Maven tool installed in Jenkins (configure in Jenkins > Global Tool Config)
-        jdk 'java'        // name of JDK configured in Jenkins
+        jdk 'Java'        // name of JDK configured in Jenkins
     }
     triggers {
-        pollSCM('H/5 * * * * *') // Polls the SCM every 5 minutes for changes
+          githubPush() // Trigger build on GitHub push events
     }
     
     stages {
@@ -31,7 +31,7 @@ pipeline {
 
         stage('Archive Reports') {
             steps {
-                junit '**/target/surefire-reports/*.xml' // collect TestNG/JUnit XML reports
+                junit '**/target/surefire-reports/*.xml' // collecting TestNG/JUnit XML reports
                 archiveArtifacts artifacts: 'target/surefire-reports/**', fingerprint: true
             }
         }
