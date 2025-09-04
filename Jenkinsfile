@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven -3.9.11'    // name of Maven tool installed in Jenkins (configure in Jenkins > Global Tool Config)
-        jdk 'java'        // name of JDK configured in Jenkins
+        jdk 'Java'        // name of JDK configured in Jenkins
     }
     triggers {
         pollSCM('H/5 * * * * *') // Polls the SCM every 5 minutes for changes
