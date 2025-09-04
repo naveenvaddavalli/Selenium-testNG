@@ -12,8 +12,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'push',
-                    url: 'https://github.com/naveenvaddavalli/cypress_vscode.git'
+                  git branch: 'newPipeline',  // branch
+                                    credentialsId: 'ff951900-7a73-4001-905d-cd0cf7b007f9',
+                                    url: 'https://github.com/naveenvaddavalli/Selenium-testNG.git'
             }
         }
 
