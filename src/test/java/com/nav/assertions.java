@@ -3,8 +3,7 @@ package com.nav;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class assertions1 {
-
+public class assertions {
 
 	
 	@Test
@@ -46,11 +45,7 @@ public class assertions1 {
 		
 		
 	}
-
 	
-
 	
-
-
+	
 }
-
