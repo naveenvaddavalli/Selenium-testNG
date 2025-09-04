@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'newPipeline',
+                git branch: 'push',
                     url: 'https://github.com/naveenvaddavalli/cypress_vscode.git'
             }
         }
@@ -38,7 +38,7 @@ pipeline {
     }
     post {
         always {
-            echo 'This will always run after the stages finish.'
+            echo 'This will always run after the stages are finished.'
         }
         success {
             echo 'This will run only if the pipeline succeeds.'
