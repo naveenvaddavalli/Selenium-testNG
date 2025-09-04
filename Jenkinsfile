@@ -6,7 +6,7 @@ pipeline {
         jdk 'Java'        // name of JDK configured in Jenkins
     }
     triggers {
-          githubPush() // Trigger build on GitHub push events
+          githubPush() // Trigger build on GitHub push events only.
     }
     
     stages {
