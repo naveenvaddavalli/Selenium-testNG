@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                  git branch: 'newPipeline',  // branch
+                  git branch: 'push',  // branch
                                     credentialsId: 'ff951900-7a73-4001-905d-cd0cf7b007f9',
                                     url: 'https://github.com/naveenvaddavalli/Selenium-testNG.git'
             }
