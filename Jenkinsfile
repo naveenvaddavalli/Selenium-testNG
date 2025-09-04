@@ -31,7 +31,7 @@ pipeline {
 
         stage('Archive Reports') {
             steps {
-                junit '**/target/surefire-reports/*.xml' // collect TestNG/JUnit XML reports
+                junit '**/target/surefire-reports/*.xml' // collecting TestNG/JUnit XML reports
                 archiveArtifacts artifacts: 'target/surefire-reports/**', fingerprint: true
             }
         }
