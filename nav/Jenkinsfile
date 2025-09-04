@@ -6,13 +6,13 @@ pipeline {
         jdk 'java'        // name of JDK configured in Jenkins
     }
     triggers {
-        pollSCM('H/5* * * * *') // Polls the SCM every minute for changes
+        pollSCM('H/5 * * * * *') // Polls the SCM every 5 minutes for changes
     }
     
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'vscodeNewBranch',
+                git branch: 'newPipeline',
                     url: 'https://github.com/naveenvaddavalli/cypress_vscode.git'
             }
         }
