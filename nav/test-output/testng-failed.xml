@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FullSuite]">
+  <listeners>
+    <listener class-name="com.resources.mylisteners"/>
+    <listener class-name="com.resources.extentTestListener"/>
+    <listener class-name="com.resources.pdfListeners"/>
+  </listeners>
+  <test thread-count="5" name="AllTests(failed)">
+    <classes>
+      <class name="com.nav.assertions">
+        <methods>
+          <include name="testTittlecond"/>
+          <include name="testTittle"/>
+        </methods>
+      </class> <!-- com.nav.assertions -->
+      <class name="com.nav.restassured">
+        <methods>
+          <include name="gettotalamount"/>
+        </methods>
+      </class> <!-- com.nav.restassured -->
+    </classes>
+  </test> <!-- AllTests(failed) -->
+</suite> <!-- Failed suite [FullSuite] -->
