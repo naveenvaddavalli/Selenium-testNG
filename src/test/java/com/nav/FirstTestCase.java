@@ -2,8 +2,10 @@ package com.nav;
 import org.openqa.selenium.chrome.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import com.resources.reporting.practicePage;
 import com.resources.webdrivermethods;
-import com.resources.practicePage;
+import com.utils.webdrivermethods;
+
 
 public class FirstTestCase {
 

@@ -112,7 +112,10 @@
     <version>3.2.5</version> <!-- Or a newer version compatible with Java 21 -->
     <configuration>
         <suiteXmlFiles>
+
+
             <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+
         </suiteXmlFiles>
     </configuration>
 </plugin>
